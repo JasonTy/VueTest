@@ -3,28 +3,30 @@
     <div>
       <div class="header">
         <img v-bind:src="pathImg" class="img-ty"/>
-        <div class="title">
-          <h1>唐的博客</h1>
-        </div>
+        <router-link to="/article">
+          <div class="title">
+            <h1>唐的博客</h1>
+          </div>
+        </router-link>
       </div>
       <ul>
         <li>
-          <router-link to="/article/code">代码</router-link>
+          <router-link to="/article/code" class="title02">代码</router-link>
         </li>
         <li>
-          <router-link to="/article/photography">摄影</router-link>
+          <router-link to="/article/photography" class="title02">摄影</router-link>
         </li>
         <li>
-          <router-link to="/article/design">设计</router-link>
+          <router-link to="/article/design" class="title02">设计</router-link>
         </li>
         <li>
-          <router-link to="/article/basketball">篮球</router-link>
+          <router-link to="/article/basketball" class="title02">篮球</router-link>
         </li>
         <li>
-          <router-link to="/article/travel">旅行</router-link>
+          <router-link to="/article/travel" class="title02">旅行</router-link>
         </li>
         <li>
-          <router-link to="/article/sanda">散打</router-link>
+          <router-link to="/article/sanda" class="title02">散打</router-link>
         </li>
       </ul>
     </div>
@@ -80,7 +82,7 @@
     display: inline-block;
   }
 
-  a::before {
+  .title02::before {
     visibility: visible;
     content: "";
     width: 100%;
@@ -92,10 +94,10 @@
     transform:scaleX(0);
     transition: all .25s ease;
   }
-  a:hover {
+  .title02:hover {
     color: #1B3DCC;
   }
-  a:hover::before {
+  .title02:hover::before {
     visibility: visible;
     width: 100%;
     transform:scaleX(1);
