@@ -10,7 +10,9 @@ import Sanda from '@/components/Sanda/Sanda'
 import Travel from '@/components/Travel/Travel'
 import logo from '@/assets/mounck.png'
 import xinzhi from '@/assets/xinzhi.jpg'
+
 Vue.use(Router)
+
 /* eslint-disable */
 export default new Router({
   mode: 'history',

@@ -10,23 +10,29 @@
         </router-link>
       </div>
       <ul>
-        <li>
-          <router-link to="/article/code" class="title02">代码</router-link>
+        <li v-on:click="da(1)">
+          <router-link to="/article/code" class="active" v-if="type==1">代码</router-link>
+          <router-link to="/article/code" class="title02" v-else>代码</router-link>
         </li>
-        <li>
-          <router-link to="/article/photography" class="title02">摄影</router-link>
+        <li v-on:click="da(2)">
+          <router-link to="/article/photography" class="active" v-if="type==2">摄影</router-link>
+          <router-link to="/article/photography" class="title02" v-else>摄影</router-link>
         </li>
-        <li>
-          <router-link to="/article/design" class="title02">设计</router-link>
+        <li v-on:click="da(3)">
+          <router-link to="/article/design" class="active" v-if="type==3">设计</router-link>
+          <router-link to="/article/design" class="title02" v-else>设计</router-link>
         </li>
-        <li>
-          <router-link to="/article/basketball" class="title02">篮球</router-link>
+        <li v-on:click="da(4)">
+          <router-link to="/article/basketball" class="active" v-if="type==4">篮球</router-link>
+          <router-link to="/article/basketball" class="title02" v-else>篮球</router-link>
         </li>
-        <li>
-          <router-link to="/article/travel" class="title02">旅行</router-link>
+        <li v-on:click="da(5)">
+          <router-link to="/article/travel" class="active" v-if="type==5">旅行</router-link>
+          <router-link to="/article/travel" class="title02" v-else>旅行</router-link>
         </li>
-        <li>
-          <router-link to="/article/sanda" class="title02">散打</router-link>
+        <li v-on:click="da(6)">
+          <router-link to="/article/sanda" class="active" v-if="type==6">散打</router-link>
+          <router-link to="/article/sanda" class="title02" v-else>散打</router-link>
         </li>
       </ul>
     </div>
@@ -39,6 +45,7 @@
 </template>
 <script>
 /* eslint-disable */
+  import {mapState, mapActions} from 'vuex'
   export default {
     name: "context",
     props: ['pathImg', 'xinzhi'],
@@ -46,6 +53,17 @@
       return {
         msg: "内容"
       }
+    },
+    computed: mapState({
+      type: function (state) {
+      return state.type;
+    }}),
+    methods: {
+      ...mapActions(['INCREMENT']),
+      da(type) {
+        this.INCREMENT(type)
+      },
+
     }
   }
 </script>
@@ -102,6 +120,10 @@
     width: 100%;
     transform:scaleX(1);
     transition: all .25s ease;
+  }
+  .active{
+    border-bottom: 1px solid #1B3DCC;
+    color: #1B3DCC
   }
   .img-ty {
     width: 60px;

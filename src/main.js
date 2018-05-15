@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import store from './store'
 // 在应用启动时，可以通过设置Vue.config.productionTip = false来关闭生产模式下给出的提示
 Vue.config.productionTip = false
 
@@ -14,9 +14,11 @@ router.beforeEach((to, from, next) => {
   }
   next()
 })
+/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
