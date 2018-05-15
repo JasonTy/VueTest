@@ -10,27 +10,27 @@
         </router-link>
       </div>
       <ul>
-        <li v-on:click="da(1)">
+        <li v-on:click="da(1, $event)">
           <router-link to="/article/code" class="active" v-if="type==1">代码</router-link>
           <router-link to="/article/code" class="1_link title02" v-else>代码</router-link>
         </li>
-        <li v-on:click="da(2)">
+        <li v-on:click="da(2, $event)">
           <router-link to="/article/photography" class="active" v-if="type==2">摄影</router-link>
           <router-link to="/article/photography" class="title02 2_link" v-else>摄影</router-link>
         </li>
-        <li v-on:click="da(3)">
+        <li v-on:click="da(3, $event)">
           <router-link to="/article/design" class="active" v-if="type==3">设计</router-link>
           <router-link to="/article/design" class="title02 3_link" v-else>设计</router-link>
         </li>
-        <li v-on:click="da(4)">
+        <li v-on:click="da(4, $event)">
           <router-link to="/article/basketball" class="active" v-if="type==4">篮球</router-link>
           <router-link to="/article/basketball" class="title02 4_link" v-else>篮球</router-link>
         </li>
-        <li v-on:click="da(5)">
+        <li v-on:click="da(5, $event)">
           <router-link to="/article/travel" class="active" v-if="type==5">旅行</router-link>
           <router-link to="/article/travel" class="title02 5_link" v-else>旅行</router-link>
         </li>
-        <li v-on:click="da(6)">
+        <li v-on:click="da(6, $event)">
           <router-link to="/article/sanda" class="active" v-if="type==6">散打</router-link>
           <router-link to="/article/sanda" class="title02 6_link" v-else>散打</router-link>
         </li>
@@ -60,8 +60,10 @@
     }}),
     methods: {
       ...mapActions(['INCREMENT']),
-      da(type) {
-        this.INCREMENT(type)
+      da(type, event) {
+        if(event.target.tagName.toLowerCase() == 'a') {
+          this.INCREMENT(type)
+        }
       }
     }
   }
