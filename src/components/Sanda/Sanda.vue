@@ -11,6 +11,15 @@
       return  {
         msg: ''
       }
+    },
+    created() {
+      setTimeout(() => {
+        this.$nextTick(() => {
+        if (document.getElementsByClassName('6_link') && document.getElementsByClassName('6_link')[0]) {
+        document.getElementsByClassName('6_link')[0].className = 'active'
+      }
+    })
+    },100)
     }
   }
 </script>

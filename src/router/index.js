@@ -30,17 +30,16 @@ export default new Router({
       name: 'Article',
       component: Article,
       children: [
-        {path: 'code', component: Code},
-        {path: 'basketball', component: Basketball},
-        {path: 'design', component: Design},
-        {path: 'photography', component: Photography},
-        {path: 'basketball', component: Basketball},
-        {path: 'sanda', component: Sanda},
-        {path: 'travel', component: Travel},
+        {path: 'code', component: Code, props: { xinzhi }, meta: {type: 1, title: "唐的博客"}},
+        {path: 'basketball', component: Basketball, meta: { type: 2, title: "唐的博客"}},
+        {path: 'design', component: Design, meta: { type: 3, title: "唐的博客"}},
+        {path: 'photography', component: Photography, meta: { type: 4, title: "唐的博客"}},
+        {path: 'basketball', component: Basketball, meta: { type: 5, title: "唐的博客"}},
+        {path: 'sanda', component: Sanda, meta: { type: 6, title: "唐的博客"}},
+        {path: 'travel', component: Travel, meta: { type: 7, title: "唐的博客"}},
       ],
       props: {
-        pathImg: logo,
-        xinzhi
+        pathImg: logo
       },
       meta: {
         title: "唐的博客"

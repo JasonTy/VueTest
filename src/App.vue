@@ -13,12 +13,11 @@ export default {
 /* eslint-disable */
 <style>
  html, body {
-   height: 100%;
+   height: 94%;
    width: 100%;
    font-size: 14px;
    color: #66665F;
    margin: 0px auto;
-   overflow: hidden;
  }
  #app {
    font-family: 'Avenir', Helvetica, Arial, sans-serif;

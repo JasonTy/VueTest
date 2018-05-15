@@ -7,7 +7,7 @@
         <div class="my-link">
         </div>
         <div class="enter-article">
-          <router-link to="/article">进入文章</router-link>
+          <router-link to="/article/code">进入文章</router-link>
         </div>
       </div>
     </div>
@@ -27,9 +27,6 @@ import $ from "jquery"
 </script>
 <style scoped>
 /* eslint-disable */
-  body {
-    overflow: hidden;
-  }
   div {
     box-sizing: border-box;
   }
