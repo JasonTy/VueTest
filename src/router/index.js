@@ -57,21 +57,21 @@ export default new Router({
 
 9.根据如下步骤来
 
- 1\.进入本地项目根目录，输入touch README.md 创建一个记录提交操作的文档
+   &nbsp;&nbsp;(1)\.进入本地项目根目录，输入touch README.md 创建一个记录提交操作的文档
 
- 2\. git init 初始化本地仓库
+   &nbsp;&nbsp;(2)\. git init 初始化本地仓库
 
- 3\. git add README.md 添加
+   &nbsp;&nbsp;(3)\. git add README.md 添加
 
- 4\. git add \* 加入所有项目
+   &nbsp;&nbsp;(4)\. git add \* 加入所有项目
 
- 5\. git status 检查状态，如果都是绿的，证明成功
+   &nbsp;&nbsp;(5)\. git status 检查状态，如果都是绿的，证明成功
 
- 6\. git commit -m “first commit” 提交到远程仓库，并写下注释
+   &nbsp;&nbsp;(6)\. git commit -m “first commit” 提交到远程仓库，并写下注释
 
- 7\. git remote add origin git@github.com:youname/Test.git 链接远程仓库并创建一个名叫 origin 的别名
+   &nbsp;&nbsp;(7)\. git remote add origin git@github.com:youname/Test.git 链接远程仓库并创建一个名叫 origin 的别名
 
- 8\. git push -u origin master 将本地仓库的东西提交到地址是origin的地址，master分支下
+   &nbsp;&nbsp;(8)\. git push -u origin master 将本地仓库的东西提交到地址是origin的地址，master分支下
         ` }, meta: {type: 1, title: "唐的博客"}},
         {path: 'basketball', component: Basketball, meta: { type: 2, title: "唐的博客"}},
         {path: 'design', component: Design, meta: { type: 3, title: "唐的博客"}},
