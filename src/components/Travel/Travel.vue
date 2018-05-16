@@ -1,6 +1,9 @@
 <template>
   <div>
-    Travel-Jason
+    <div style="width: 600px;min-height: 300px;margin: 60px auto 40px auto;">
+      <img v-bind:src="gaoqing01" class="content-img"/>
+      <img v-bind:src="gaoqing02" class="content-img"/>
+    </div>
   </div>
 </template>
 <script>
@@ -12,6 +15,7 @@
         msg: ''
       }
     },
+    props: ['gaoqing01', 'gaoqing02'],
     created() {
       setTimeout(() => {
         this.$nextTick(() => {
@@ -23,3 +27,17 @@
     }
   }
 </script>
+<style scoped>
+  .content-img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  @media (max-width: 600px) {
+    .content-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>

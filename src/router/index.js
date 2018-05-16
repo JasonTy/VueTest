@@ -11,6 +11,8 @@ import Travel from '@/components/Travel/Travel'
 import Detail from '@/components/Code/Detail'
 import logo from '@/assets/mounck.png'
 import xinzhi from '@/assets/xinzhi.jpg'
+import gaoqing01 from '@/assets/gaoqing01.jpg'
+import gaoqing02 from '@/assets/gaoqing02.jpg'
 
 Vue.use(Router)
 
@@ -38,7 +40,7 @@ export default new Router({
         {path: 'photography', component: Photography, props: {xinzhi}, meta: { type: 4, title: "唐的博客"}},
         {path: 'basketball', component: Basketball, meta: { type: 5, title: "唐的博客"}},
         {path: 'sanda', component: Sanda, meta: { type: 6, title: "唐的博客"}},
-        {path: 'travel', component: Travel, meta: { type: 7, title: "唐的博客"}}
+        {path: 'travel', component: Travel, meta: { type: 7, title: "唐的博客"}, props: {gaoqing01, gaoqing02}}
       ],
       props: {
         pathImg: logo
