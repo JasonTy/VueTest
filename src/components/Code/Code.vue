@@ -29,7 +29,7 @@
     methods: {
       redirect(event) {
         const url = $(event.target).attr('data-url')
-        window.location.href = `code/${url}`
+        window.location.href = `/article/code/${url}`
       }
     }
   }
