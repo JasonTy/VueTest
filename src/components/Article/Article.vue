@@ -3,7 +3,7 @@
     <div>
       <div class="header">
         <img v-bind:src="pathImg" class="img-ty"/>
-        <router-link to="/article/code">
+        <router-link to="/">
           <div class="title">
             <h1>唐的博客</h1>
           </div>
