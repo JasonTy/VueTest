@@ -1,8 +1,11 @@
 <template>
   <div>
     <div style="width: 600px;min-height: 300px;margin: 60px auto 40px auto;">
+      <div style="text-align: left; font-size: 20px; font-weight: 500; margin-bottom: 20px">普吉岛之行</div>
       <img src="https://jasonblog.oss-cn-hangzhou.aliyuncs.com/2%20%2889%29.jpg?x-oss-process=style/shuiyin" class="content-img"/>
+      <div style="text-align: left; font-size: 12px; font-weight: 300">2018-05-17</div>
       <img src="https://jasonblog.oss-cn-hangzhou.aliyuncs.com/2%20%2891%29.jpg?x-oss-process=style/shuiyin" class="content-img"/>
+      <div style="text-align: left; font-size: 12px; font-weight: 300">2018-05-17</div>
     </div>
   </div>
 </template>
