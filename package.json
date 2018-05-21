@@ -2,7 +2,7 @@
   "name": "vuetest",
   "version": "1.0.0",
   "description": "vuetest",
-  "author": "唐轶 <1026443062@qq.com>",
+  "author": "JasonTy <1026443062@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
