@@ -3,6 +3,7 @@
  */
 import Vuex from 'vuex'
 import Vue from 'vue'
+import fetch from 'node-fetch'
 
 Vue.use(Vuex)
 
@@ -17,6 +18,9 @@ const mutations = {
 }
 const actions = {
   INCREMENT ({commit}, type) {
+    fetch('http://127.0.0.1:8008/v1/api/blogDetail', {method: 'POST', body: {id: 1}, mode: 'no-cors'})
+      .then(res => res)
+      .then(json => console.log(json.data))
     commit('INCREMENT', type)
   }
 }
