@@ -3,25 +3,30 @@
  */
 import Vuex from 'vuex'
 import Vue from 'vue'
-import fetch from 'node-fetch'
-
 Vue.use(Vuex)
 
 const state = {
   count: 0,
-  type: 0
+  type: 0,
+  itemed: [
+    {date: '2018-05-15', message: 'Mac 环境下上传本地项目到gitHub', url: '20180515'},
+    {date: '2018-05-12', message: '服务器如何安装jenkins', url: '20180512'}
+  ]
 }
 const mutations = {
   INCREMENT (state, type) {
     state.type = type
+  },
+  INSERTDATA (state, itemed) {
+    state.itemed = itemed
   }
 }
 const actions = {
   INCREMENT ({commit}, type) {
-    fetch('http://127.0.0.1:8008/v1/api/blogDetail', {method: 'POST', body: {id: 1}, mode: 'no-cors'})
-      .then(res => res)
-      .then(json => console.log(json.data))
     commit('INCREMENT', type)
+  },
+  INSERTDATA ({commit}, itemed) {
+    commit('INSERTDATA', itemed)
   }
 }
 export default new Vuex.Store({

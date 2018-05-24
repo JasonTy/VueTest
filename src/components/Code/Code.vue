@@ -1,32 +1,47 @@
 <template>
 <div style="width: 600px;min-height: 300px;margin: 60px auto 40px auto;">
   <ul style="text-align: left">
-    <li v-for="item in items" :key="item.id">
-      <span v-html="item.date"></span>
-      <span v-html="item.message" class="span-ty" v-on:click="redirect($event)" :data-url="item.url"></span>
+    <li v-for="item in itemed" :key="item.id">
+      <span v-html="item.title"></span>
+      <span v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.title"></span>
     </li>
   </ul>
 </div>
 </template>
 <script>
 /* eslint-disable */
+  import {mapState, mapActions} from 'vuex'
   import $ from 'jquery'
+  import {fetchApi} from './../../service/apiFetch'
   export default {
     name: 'context',
     data () {
       return  {
-        items: [
-          {date: '2018-05-15', message: 'Mac 环境下上传本地项目到gitHub', url: '20180515'},
-          {date: '2018-05-12', message: '服务器如何安装jenkins', url: '20180512'}
-        ]
+        items: []
       }
     },
+    created() {
+      this.setData()
+    },
+    computed: mapState({
+      itemed: function (state) {
+        return state.itemed
+    }}),
     mounted() {
       if (document.getElementsByClassName('1_link') && document.getElementsByClassName('1_link')[0]) {
         document.getElementsByClassName('1_link')[0].className = 'active'
       }
     },
     methods: {
+      ...mapActions(['INSERTDATA']),
+      setData() {
+        fetchApi('v1/api/blogList', {id: 1, name: 'dasd'})
+          .then(res => res.json())
+          .then(json => {
+            this.INSERTDATA(json.data)
+          })
+          .catch(e => console.log(e))
+      },
       redirect(event) {
         const url = $(event.target).attr('data-url')
         window.location.href = `/article/code/${url}`
