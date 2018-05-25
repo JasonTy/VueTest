@@ -3,7 +3,7 @@
   <ul style="text-align: left">
     <li v-for="item in itemed" :key="item.id">
       <span v-html="item.title"></span>
-      <span v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.title"></span>
+      <span v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.id"></span>
     </li>
   </ul>
 </div>
@@ -12,6 +12,7 @@
 /* eslint-disable */
   import {mapState, mapActions} from 'vuex'
   import $ from 'jquery'
+  import moment from 'moment'
   import {fetchApi} from './../../service/apiFetch'
   export default {
     name: 'context',
@@ -35,7 +36,7 @@
     methods: {
       ...mapActions(['INSERTDATA']),
       setData() {
-        fetchApi('v1/api/blogList', {id: 1, name: 'dasd'})
+        fetchApi('v1/api/blogList', {temptime:moment().format('YYYY-MM-DD HH:mm:ss'), appKey: '14b2139df051205336c561d4c139dd51'})
           .then(res => res.json())
           .then(json => {
             this.INSERTDATA(json.data)

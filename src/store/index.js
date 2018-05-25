@@ -11,7 +11,8 @@ const state = {
   itemed: [
     {date: '2018-05-15', message: 'Mac 环境下上传本地项目到gitHub', url: '20180515'},
     {date: '2018-05-12', message: '服务器如何安装jenkins', url: '20180512'}
-  ]
+  ],
+  detail: {}
 }
 const mutations = {
   INCREMENT (state, type) {
@@ -19,6 +20,9 @@ const mutations = {
   },
   INSERTDATA (state, itemed) {
     state.itemed = itemed
+  },
+  INSERTDATADETAIL (state, detail) {
+    state.detail = detail
   }
 }
 const actions = {
@@ -27,6 +31,9 @@ const actions = {
   },
   INSERTDATA ({commit}, itemed) {
     commit('INSERTDATA', itemed)
+  },
+  INSERTDATADETAIL ({commit}, detail) {
+    commit('INSERTDATADETAIL', detail)
   }
 }
 export default new Vuex.Store({
