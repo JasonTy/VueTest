@@ -5,7 +5,7 @@ export function fetchApi (url, opt) {
   var headers = new fetch.Headers()
   headers.append('content-type', 'application/x-www-form-urlencoded;charset=UTF-8')
   headers.append('accept', 'application/json, application/xml, text/plain, text/html, *.*')
-  return fetch(`https://api.jasonty.com:8008/${url}`, {
+  return fetch(`https://api.jasonty.com/${url}`, {
     method: 'post',
     headers: headers,
     body: optKey(opt),
