@@ -2,8 +2,10 @@
 <div style="width: 600px;min-height: 300px;margin: 16px auto 40px auto;">
   <ul style="text-align: left">
     <li v-for="item in itemed" :key="item.id">
-      <span v-html="formatDate(item.title)"></span>
-      <span v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.id"></span>
+        <span v-html="formatDate(item.title)" class="title"></span>
+        <span v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.id"></span>
+        <br/>
+        <span v-html="item.scontent" style="font-size: 12px"></span>
     </li>
   </ul>
 </div>
@@ -26,6 +28,7 @@
     },
     computed: mapState({
       itemed: function (state) {
+        console.log(state.itemed)
         return state.itemed
       }}),
     mounted() {
@@ -49,6 +52,9 @@
       },
       formatDate(date) {
         return moment(date).format('YYYY-MM-DD')
+      },
+      replaceText(text) {
+
       }
     }
   }
@@ -59,12 +65,13 @@
     line-height: 60px;
     font-size: 18px;
     font-weight: 500;
-    height: 80px;
+    height: 120px;
   }
   .span-ty {
     position: relative;
     cursor: pointer;
     margin-left: 20px;
+    font-size: 18px;
   }
   .span-ty::before {
     visibility: visible;
@@ -86,6 +93,11 @@
     width: 100%;
     transform:scaleX(1);
     transition: all .25s ease;
+  }
+  .title {
+    font-size: 14px;
+    position: relative;
+    top: -1px;
   }
 </style>
 
