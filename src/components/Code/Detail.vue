@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 600px;min-height: 300px;margin: 60px auto 40px auto; text-align: left;">
+  <div style="width: 600px;min-height: 300px;margin: 16px auto 40px auto; text-align: left;">
     <VueMarkdown :source="detail" style="overflow: hidden"></VueMarkdown>
   </div>
 </template>
