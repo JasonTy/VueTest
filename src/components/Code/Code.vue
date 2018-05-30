@@ -8,7 +8,9 @@
       <!--<div v-html="item.scontent" class="scontent"></div>-->
       <div style="display: flex; flex-direction: row; align-content: center">
         <div style="flex: 1" v-html="formatDate(item.title)" class="title"></div>
-        <div style="flex: 3" v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.id"></div>
+        <div style="flex: 3">
+          <span v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.id"></span>
+        </div>
       </div>
       <div style="display: flex; flex-direction: row; align-content: center">
         <div style="flex: 1"></div>
