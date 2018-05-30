@@ -2,10 +2,19 @@
 <div style="width: 600px;min-height: 300px;margin: 16px auto 40px auto;">
   <ul style="text-align: left">
     <li v-for="item in itemed" :key="item.id">
-      <span v-html="formatDate(item.title)" class="title"></span>
-      <span v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.id"></span>
-      <br/>
-      <div v-html="item.scontent" class="scontent"></div>
+      <!--<span v-html="formatDate(item.title)" class="title"></span>-->
+      <!--<span v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.id"></span>-->
+      <!--<br/>-->
+      <!--<div v-html="item.scontent" class="scontent"></div>-->
+      <div style="display: flex; flex-direction: row; align-content: center">
+        <div style="flex: 1" v-html="formatDate(item.title)" class="title"></div>
+        <div style="flex: 3" v-html="item.stitle" class="span-ty" v-on:click="redirect($event)" :data-url="item.id"></div>
+      </div>
+      <div style="display: flex; flex-direction: row; align-content: center">
+        <div style="flex: 1"></div>
+        <div style="flex: 3" v-html="item.scontent" class="scontent">
+        </div>
+      </div>
     </li>
   </ul>
 </div>
@@ -63,12 +72,11 @@
     list-style: none;
     font-size: 18px;
     font-weight: 500;
-    height: 120px;
+    height: 150px;
   }
   .span-ty {
     position: relative;
     cursor: pointer;
-    margin-left: 20px;
     font-size: 22px;
   }
   .span-ty::before {
@@ -94,16 +102,17 @@
   }
   .title {
     font-size: 14px;
-    position: relative;
-    top: -1px;
+    margin:auto;
   }
   .scontent {
     font-size: 12px;
     width: 400px;
-    height: 80px;
-    white-space: nowrap;
+    height: 52px;
+    color: #66665f;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     overflow: hidden;
-    text-overflow: ellipsis;
   }
 </style>
 
