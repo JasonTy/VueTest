@@ -14,7 +14,7 @@
       </div>
       <div style="display: flex; flex-direction: row; align-content: center">
         <div style="flex: 1"></div>
-        <div style="flex: 3" v-html="item.scontent" class="scontent">
+        <div style="flex: 3; -webkit-box-orient: vertical;" v-html="item.scontent" class="scontent">
         </div>
       </div>
     </li>
@@ -115,9 +115,6 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    box-orient: vertical;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
   }
 </style>
 
