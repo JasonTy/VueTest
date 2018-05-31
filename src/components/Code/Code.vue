@@ -115,7 +115,9 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    box-orient: vertical;
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
   }
 </style>
 
