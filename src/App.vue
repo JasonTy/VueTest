@@ -13,11 +13,12 @@ export default {
 /* eslint-disable */
 <style>
  html, body {
-   height: 94%;
+   height: 101%;
    width: 100%;
    font-size: 14px;
    color: #66665F;
    margin: 0px auto;
+   position: relative;
  }
  #app {
    font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -25,7 +26,18 @@ export default {
    -moz-osx-font-smoothing: grayscale;
    text-align: center;
    color: black;
-   margin-top: 60px;
    opacity: 0.9;
  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #f7f7fa;
+    text-align: center;
+    font-size: 12px;
+    color: #777777;
+    line-height: 40px;
+  }
 </style>

@@ -1,13 +1,15 @@
 <template>
   <div>
     <div>
-      <div class="header">
-        <img v-bind:src="pathImg" class="img-ty"/>
-        <router-link to="/">
-          <div class="title">
-            <h1>唐的博客</h1>
-          </div>
-        </router-link>
+      <div class="navigation">
+        <div class="header">
+          <img v-bind:src="pathImg" class="img-ty"/>
+          <router-link to="/">
+            <div class="title">
+              <span style="font-weight: bold; font-size: 16px; color: white">唐的博客</span>
+            </div>
+          </router-link>
+        </div>
       </div>
       <ul>
         <li v-on:click="da(1, $event)">
@@ -127,10 +129,10 @@
     color: #1B3DCC
   }
   .img-ty {
-    width: 60px;
-    height: 60px;
+    width: 20px;
+    height: 20px;
     position: relative;
-    top: 18px;
+    top: 4px;
   }
   .content-img {
     margin: 0;
@@ -143,5 +145,10 @@
       width: 100%;
       height: 100%;
     }
+  }
+  .navigation {
+    height: 40px;
+    background-color: black;
+    line-height: 40px;
   }
 </style>
