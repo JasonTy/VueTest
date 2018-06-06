@@ -11,14 +11,14 @@
           </router-link>
         </div>
       </div>
-      <ul>
+      <ul style="margin-top: 5px">
         <li v-on:click="da(1, $event)">
           <router-link to="/article/code" class="active" v-if="type==1">代码</router-link>
           <router-link to="/article/code" class="1_link title02" v-else>代码</router-link>
         </li>
-        <li v-on:click="da(2, $event)">
-          <router-link to="/article/photography" class="active" v-if="type==2">摄影</router-link>
-          <router-link to="/article/photography" class="title02 2_link" v-else>摄影</router-link>
+        <li v-on:click="da(8, $event)">
+          <router-link to="/article/curriculumvitae" class="active" v-if="type==8">个人简历</router-link>
+          <router-link to="/article/curriculumvitae" class="title02 8_link" v-else>个人简历</router-link>
         </li>
         <li v-on:click="da(3, $event)">
           <router-link to="/article/design" class="active" v-if="type==3">设计</router-link>

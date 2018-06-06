@@ -3,7 +3,7 @@
     <div class="div-index">
       <div class="div-context">
         <h1>唐的博客</h1>
-        <div class="my-label">代码/摄影/跑步/电影/篮球/设计/散打/一切有趣的/...</div>
+        <div class="my-label">代码/个人简历/跑步/电影/篮球/设计/散打/一切有趣的/...</div>
         <div class="my-link">
         </div>
         <div class="enter-article">

@@ -25,7 +25,6 @@ export default {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    text-align: center;
-   color: black;
    opacity: 0.9;
  }
   .footer {
