@@ -1,6 +1,10 @@
 <template>
   <div style="width: 600px;min-height: 300px;margin: 16px auto 40px auto; text-align: left;">
     <VueMarkdown :source="detail" style="overflow: hidden"></VueMarkdown>
+    <VueMarkdown :source="messages" style="overflow: hidden"></VueMarkdown>
+    <textarea v-model="messages" style="outline: none; min-width: 600px; min-height: 120px; border: 1px solid #777777; margin-top: 20px; padding: 8px">
+
+    </textarea>
   </div>
 </template>
 <script>
@@ -14,6 +18,11 @@
     props: ['contents'],
     components: {
       'VueMarkdown': VueMarkdown
+    },
+    data () {
+      return {
+        messages: 'dasadsads'
+      }
     },
     computed: mapState({
       detail: function (state) {
